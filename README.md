@@ -12,12 +12,12 @@ We can construct a quadtree from a two-dimensional area using the following step
 Quadtrees are also used in searching for nodes in a two-dimensional area. For instance, if you wanted to find the closest point to given coordinates, you can do it using quadtrees.
 
 
-# java-simple-quadtree
+## java-simple-quadtree
 
 A quadtree written in Java. Supports insert, search, Area, Subdivide, and more! Plenty of unit tests and also a performance report to compare with a brute force method.
 
 
-# Creating the QuadTree and inserting items
+### Creating the QuadTree and inserting items
 
 Default quadTree is 10000 * 10000, will store a maximum of 10 objects per node, and will grow to a depth of 5.
 QuadTree qt = new QuadTree(root);
@@ -39,12 +39,11 @@ qt.ne = new Node((x2 - x1)/2 + x1, (y2 - y1)/2 + y1, x2, y2);
 qt.neqt = new QuadTree(qt.ne);
 
 
-## Querying the QuadTree
+### Querying the QuadTree
 
 * The QuadTree can be easily queried using the search method. Pass in a SearchRectangleObject with
 * the bounds you want to search. It will return the RectangleObjects that overlap with 
 * your SearchRectangleObject.
-*
 * The following quereis the 100 * 100 area with the top-left corner at x = 0, y = 0
 
 boolean b = search(p, qt);
