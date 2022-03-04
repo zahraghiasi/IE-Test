@@ -1,3 +1,6 @@
+#picture
+*.png
+
 # Compiled class file
 *.class
 
