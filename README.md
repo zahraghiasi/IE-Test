@@ -1,20 +1,23 @@
-Quadtrees are treedata structure in which used to efficiently store data of points on a two-dimensional space. In this tree, each node has at most four children.
+# QuadTree
+ Quadtrees are treedata structure in which used to efficiently store data of points on a two-dimensional space.
+In this tree, each node has at most four children.
 We can construct a quadtree from a two-dimensional area using the following steps:
 1.Divide the current two dimensional space into four boxes.
 2.If a box contains one or more points in it, create a child object, storing in it the two dimensional space of the box
 3.If a box does not contain any points, do not create a child for it.
 4.Recurse for each of the children.
 
-Quadtrees are used in image compression, where each node contains the average colour of each of its children. The deeper you traverse in the tree, the more the detail of the image.
+## QuadTree Use
+ Quadtrees are used in image compression, where each node contains the average colour of each of its children. The deeper you traverse in the tree, the more the detail of the image.
 Quadtrees are also used in searching for nodes in a two-dimensional area. For instance, if you wanted to find the closest point to given coordinates, you can do it using quadtrees.
 
 
----java-simple-quadtree---
+# java-simple-quadtree
 
 A quadtree written in Java. Supports insert, search, Area, Subdivide, and more! Plenty of unit tests and also a performance report to compare with a brute force method.
 
 
----Creating the QuadTree and inserting items---
+# Creating the QuadTree and inserting items
 
 Default quadTree is 10000 * 10000, will store a maximum of 10 objects per node, and will grow to a depth of 5.
 QuadTree qt = new QuadTree(root);
@@ -36,7 +39,7 @@ qt.ne = new Node((x2 - x1)/2 + x1, (y2 - y1)/2 + y1, x2, y2);
 qt.neqt = new QuadTree(qt.ne);
 
 
----Querying the QuadTree---
+## Querying the QuadTree
 
 * The QuadTree can be easily queried using the search method. Pass in a SearchRectangleObject with
 * the bounds you want to search. It will return the RectangleObjects that overlap with 
@@ -49,3 +52,4 @@ boolean b = search(p, qt);
 .
 .
 .
+and more!
