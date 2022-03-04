@@ -30,13 +30,13 @@ QuadTree qt = new QuadTree(root);
 * objects that needed to be in the QuadTree. 
 
 qt.sw = new Node(x1, y1, (x2 - x1)/2 + x1, (y2 - y1)/2 + y1);
-qt.swqt = new QuadTree(qt.sw);
+
 qt.se = new Node((x2 - x1)/2 + x1, y1, x2, (y2 - y1)/2 + y1);
-qt.seqt = new QuadTree(qt.se);
+
 qt.nw = new Node(x1, (y2 - y1)/2 + y1, (x2 - x1)/2 + x1, y2);
-qt.nwqt = new QuadTree(qt.nw);
+
 qt.ne = new Node((x2 - x1)/2 + x1, (y2 - y1)/2 + y1, x2, y2);
-qt.neqt = new QuadTree(qt.ne);
+
 
 
 ### Querying the QuadTree
